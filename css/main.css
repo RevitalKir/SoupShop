@@ -1,0 +1,1196 @@
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {-webkit-text-size-adjust: none; }
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*-----BODY -----*/
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;	/*also loaded 600 for bold*/
+}
+em {font-style: italic;}
+strong {font-weight: bold;}
+small {font-size:.6em;
+		color:white; 
+}
+h1{font-size:2.8em;
+		padding:.3em;
+		text-align: center;
+}
+h2 { font-size: 2.5em;
+font-family: 'Open Sans', sans-serif;
+font-weight:800;
+
+}
+h3 { font-size: 2.4em;
+		font-weight:800;
+}
+
+a {text-decoration:none;
+}
+blockquote {
+	font-weight: 600;
+}
+
+
+small.caps {
+		position:absolute;
+		left:180px;
+}
+
+/*-----HEADER -----*/
+#headerWrapper {
+	background-color: #000;
+}
+header {
+	padding: 1em 2% .5em 2%;
+}
+
+header h1 {
+	font-size: 2.1em;
+	color: #fff;
+}
+header h2 {
+	font-size: .9em;
+	font-weight: 300;
+	color: #ddd;
+	margin-top: .75em;
+}
+
+
+header ul li a{
+	color:white;
+	text-decoration: none;
+	font-size:.7em;
+	display: block;
+	float: none;
+	margin-top:.5em;
+	text-align: right;
+	padding:.5em;
+	position:relative;
+	top:-12vh;
+	
+	}
+
+	header img.logo {
+		width:50vh;
+		padding-left:2%;
+		position:relative;
+		margin-bottom:-70px;
+	}
+
+
+header ul li:first-child {
+	margin-top: 2em;
+}
+
+div.proverb {
+	display:none;
+}
+
+.facebook {
+	background-color: #3b5998;
+	color:white;
+	font-weight: 600;
+	border:none;
+}
+.facebook::after {
+	content: url(../img/fbook.png);
+	padding: 0 .4em;
+	
+}
+div.registration li a {
+	cursor: pointer;
+}
+/*---------- NAVIGATION -----------*/
+#navWrapper {background-color: #e61b10;}
+
+nav ul {
+	display:none;
+}
+
+nav select {
+	display:block;
+	margin:0 5%;
+	max-width:30%;
+	height:45px;
+	padding:0 .2em;
+	border-radius: .5em;
+	border:2px solid #000;
+	font-size:1.4em;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+	padding:0.2em 0;
+}
+
+
+	
+blockquote {
+	text-align: center;
+	font-size: .8em;
+}
+p.cite {
+	text-align: center;
+	font-size: .7em;
+	padding:1.5em;
+}
+
+/*-----------------SEARCH BOX STYLES-------------*/
+div#searchbox {
+	
+	position:relative;
+	left:47%;
+	top:-48px;
+	z-index:9;
+}
+
+input[name="search"] {
+    width: 40%;
+	height:45px;
+	border:2px solid #ccc;
+	border-radius:7px;
+	padding: 1px 2px 1px 30px;
+	background-image: url(../img/searchicon.png);
+	background-repeat: no-repeat;
+	background-position: 5px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+	margin:0 5%;
+	font-weight: 600;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[name="search"]:focus {
+    width: 47%;
+	background:rgba(248,118,4,0.82)
+}
+
+/*------end of search styles---------*/
+
+h1.title {
+	margin-top: -50px;
+}
+/*------------------Product panel styles-----------------*/
+
+div#cookbook {
+	margin-left:20px;
+	margin-top: 10px;
+	display:inline-block;
+	z-index: 99;
+	cursor:pointer;
+}
+
+/*---------------------------end of product page styles-------*/
+
+
+/*--------Login Modal Styles --------------------*/
+
+.orange {
+	background-color:#ff7200;
+}
+
+.w3-button {
+    color: #fff;
+	font-weight: 600;
+    background-color: #ff7200;
+    padding: 8px 12px;
+	/*border: 1px outset #ff7200;*/
+	transition: border-radius .5s ease;
+}
+
+.w3-button:hover {
+    color: #fff !important;
+    background-color:#e61b10 !important;
+	border-radius: 50px;
+}
+
+form {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*------------CART styles ---------------*/
+ul#cartnav li{
+	display:inline;
+	position:relative;
+	left:63%;
+}
+#num_items {
+	position:relative;
+	left:0;
+	top:15px;
+}
+
+.promo1 {
+	margin:1em auto;
+	font-weight: bolder;
+	padding:.1em;
+	line-height: 1.8em;
+	border-radius:7px;
+	text-align: center;
+ 	background: #e61b10; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-170deg, #e61b10, #ff7200, #e61b10); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(-170deg, #e61b10, #ff7200); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-170deg, #e61b10, #ff7200); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-170deg, #e61b10, #ff7200, #e61b10); /* Standard syntax */
+}
+ul#shopping-table {
+	margin:.5em 0;
+}
+ul#shopping-table li {
+	display:inline;
+    font-weight:600; 
+}
+ul#shopping-table li:first-child {
+	margin-right: 5.5em;
+}
+ul#shopping-table li:last-child {
+	margin-left: 5.5em;
+}
+ul#shopping-items {
+	margin: .5em 0;
+	opacity:0;
+}
+ul#shopping-items li{
+    display:inline;	
+}
+ul#shopping-items li:first-child {
+	margin-right: 11%;
+	
+}
+ul#shopping-items li:last-child {
+	margin-left: 22%;
+}
+input#quantity {
+	width:50px;
+	border:1px solid orange;
+	border-radius:7px;
+	padding-left:.2em;
+}
+.subtotal {
+	padding:1em 0;
+}
+.sub-price {
+	position:relative;
+	left:77%;
+	top:-2em;
+}
+.shopping-footer {
+	padding:.7em
+}
+.shipping-fee {
+	text-align: center;
+	font-weight: 600;
+	font-style: italic;
+	margin:1em 0;
+	padding: .3em;
+	font-size:1.2em;
+	border-radius:7px;
+	background: #e61b10; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-170deg, #e61b10, #ff7200, #e61b10); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(-170deg, #e61b10, #ff7200); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-170deg, #e61b10, #ff7200); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-170deg, white, #ff7200, white); /* Standard syntax */
+}
+
+button.checkout {
+	position:relative;
+	left: 37%;
+	margin:0 0 .8em 0;
+}
+/*--------------end of cart styles-----*/
+
+
+
+/*-------------SIDEBAR-PRODUCT styles------*/
+.sidenav {
+    height: 100%; /* 100% Full-height */
+	margin-top:1.5%;
+	
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #000; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 12px 8px 12px 32px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav h2 {
+	color:white;
+	font-weight: 600;
+	padding: 12px 8px 12px 12px;
+	max-width: 360px;
+	text-align: center;
+	font-size: 2em;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: relative;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 45%;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+
+/*--------end of SIDEBAR-PRODUCT styles------*/
+
+/*----------------iCOOK Styles---------------*/
+
+#accordion-resizer {
+    padding: 10px;
+    width: 70%;
+	height:50%;
+    margin:2% auto;
+  }
+textarea {
+	max-width: 100%;
+	background: rgba(255,114,0,0.53); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-10deg, white, rgba(255,114,0,0.53), white); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(-10deg, white, rgba(255,114,0,0.53), white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-10deg, white, rgba(255,114,0,0.53), white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-10deg, white, rgba(255,114,0,0.53), white); /* Standard syntax */
+}
+.icook-bg {
+	background-image:url(../img/veggies-opaque.jpg)
+}
+
+.chef {
+	transition: letter-spacing .7s ease-in-out;
+}
+.chef-pro {
+	letter-spacing: .7em;
+}
+
+ul#notes-buttons li {
+	display:inline;
+	margin-right: 2em;
+	float:right;
+}
+/*----------------end of iCOOK styles------------------*/
+
+/*----- FOOTER -----*/
+#footerWrapper {background-color: #000;}
+footer {
+	clear: both;
+	font-size: .7em;
+	color: #fff;
+	text-align: center;
+	padding: .6em;
+}
+footer a {color: #fff;}
+
+.registration_footer {
+	padding: 1em 0;
+}
+
+/* ----- OTHER STUFF ----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*------------------Style the BG----------*/
+#centerpic {width:100%;}
+/*------------------Style the BG----------*/
+
+
+/*************HOME PAGE*************************************/
+
+.preview-recipe { margin-top: 3em;
+}
+.prep-details p {font-weight:600;
+				
+}
+
+.title-all-soups,
+.preview-recipe-name,
+.recommended-recipe-name,
+.preview-recipe-description,
+.recommended-recipe-description { text-align:center;
+
+}
+.soup-of-week-title{ margin:1.5em 0;
+}
+
+.all-soup-title { margin-top:3em;  /*make the title all soups be in distance from the img on top*/
+					margin-bottom: -1.5em
+}
+
+ .preview-recipe-img,
+ .recommended-recipe-img {width:100%;   /*every thing takes 100% of the width of the divise*/
+      }
+	  
+	  
+/*all the info on the img about the recipe*/	  
+  .prep-details { margin-top: -6.5em; /*makes the details appear ontop the img*/
+  				color:white;
+				text-align:center;
+				
+  }
+
+/* the info od preo time, skill and votes*/
+.preview-recipe-info { text-aline:center;
+			padding-left:3px;
+			padding-right: 5px;
+			 position:relative;   /*position is needed for the z-index to work. */
+			 z-index:1; /* z-index is needed for the <ul> be ontop on the img so the background-color would be visible */
+			 margin-top: 0.6em;
+			
+			
+}
+
+.prep {font-weight:600;   /*.prep-details li*/
+	 border-right: 2px solid gray;
+	display:inline;
+	padding-right: 5px;
+	text-align:left;
+	font-size: 0.9em;
+	
+			
+}
+
+/*************RECIPE PAGE*************************************/
+
+.soup-title { margin-bottom:1em;
+			
+}
+
+.featured-img img{ width:100vw;  /*the img of soup in the header*/
+
+}
+
+.recipe-param { width:99vw;
+text-align:center;
+display:flex;
+flex-direction:row;
+flex-wrap: wrap;
+justify-content:space-between;
+align-items:baseline;
+margin-left:7px;
+}
+/*div with preper icons and info*/
+.prep-time,
+.servers,
+.skill-level,
+.likes      {width: 24%;
+border-right:1px solid #ddd;
+		
+}
+
+
+.prep-time img,
+.servers img,
+.skill-level img,
+.likes img     {width: 36px;
+}
+
+/*the style of the prep time+servings+skill level+likes*/
+.recipe-param h6{line-height:1.2em;
+}
+.recipe-param h6 span { color: #ff7200;
+						font-weight:500;						
+}
+
+
+
+.recipe-rate button {background-color:rgba(255,114,0,0.9);
+					color:white;
+					border: 2px outset #ddd;
+					width:97%;
+					font-family: 'Open Sans', sans-serif;
+					font-size:1.5em;
+					text-align:center;
+					margin: 0.5em 0.5% 1% 1.5%;
+					min-height:46px
+					
+					
+}
+
+
+.recipe-rate button:hover {border: 2px solid #ddd;
+							background-color:rgba(255,114,0,1.00);
+}
+
+.w3-button {
+    color: #fff;
+	font-weight: 600;
+    background-color: #ff7200;
+    padding: 8px 12px;
+	/*border: 1px outset #ff7200;*/
+	transition: border-radius .5s ease;
+}
+
+.w3-button:hover {
+    color: #fff !important;
+    background-color:#e61b10 !important;
+	border-radius: 50px;
+}
+
+
+.recipe-ingredients,
+.recipe-directions { width:98%;
+			margin-left:2.5%;	
+			line-height:1.3;
+			margin-bottom:1.5em;
+			
+}
+.recipe-ingredients{ margin-left:4%;
+			line-height:1.5;
+}
+/*ingredients title*/
+.ingredients-title{ margin:0.5em 0;
+}
+
+.ingredients-title,
+.directions-title { text-align:center;
+					font-size: 0.7em;
+					font-weight:bold;
+
+}
+.directions-title{ margin-bottom:-1em
+}
+.recipe-directions li {margin-bottom:1em;
+}
+
+
+.recipe-directions li::first-letter{
+   color: #ff7200;
+   font-size:2.5em;
+   font-weight:bold;
+   
+}
+
+/*--------------product Pages styles---------*/
+#our-R-book {
+	margin: 0 40%;
+}
+.product-price {
+	text-align: center;
+	margin:.3em .5em;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+.product-cart {
+	text-align: center;
+	margin:1% 42%;
+	padding:5px;
+	font-size: 1em;
+	cursor:pointer;	
+}
+
+.veggie-bg {
+	background-image:url(../img/veggies3-opaque.png);
+ 	background-repeat: no-repeat;
+  	background-size: cover; 
+}
+/*----------end on product pages styles--------*/
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 768px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 1em;}
+	.sidenav h2 {font-size:1.2em;}
+}
+
+@media only screen and (min-width: 280px) {
+nav select {
+	display:block;
+	margin:0 5%;
+	max-width:40%;
+	height:45px;
+	padding:0 .2em;
+	border-radius: .5em;
+	border:2px solid #000;
+	font-size:1.2em;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	}
+	
+	header img.logo {
+	width:40vh;
+	padding-left:4%;
+	position:relative;
+	margin-bottom:-90px;
+	}
+	
+	header ul li a{
+	color:white;
+	text-decoration: none;
+	font-size:.7em;
+	display: block;
+	float: none;
+	margin-top:.5em;
+	text-align: right;
+	padding:.5em;
+	position:relative;
+	top:-5vh;
+	
+	}
+	div#cookbook {
+	position:relative;
+	margin-left:20px;
+	display:inline;
+	top:-40px;
+	z-index: 99;
+	cursor:pointer;
+	}
+	.btn-control {
+		padding:4px;
+		font-size:.6em!important ;
+		max-width: 150px;
+	}
+}
+@media only screen and (min-width: 360px) {
+	nav select {
+	display:block;
+	margin:0 5%;
+	max-width:40%;
+	height:45px;
+	padding:0 .2em;
+	border-radius: .5em;
+	border:2px solid #000;
+	font-size:1.4em;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	}
+	header img.logo {
+	width:30vh;
+	padding-left:4%;
+	position:relative;
+	margin-bottom:-90px;
+	}
+	header ul li a{
+	color:white;
+	text-decoration: none;
+	font-size:.7em;
+	display: block;
+	float: none;
+	margin-top:.5em;
+	text-align: right;
+	padding:.5em;
+	position:relative;
+	top:-4vh;
+	
+	}
+	div#cookbook {
+	margin-left:1px;
+	margin-top: 10px;
+	margin-bottom:30px;
+	display:inline-block;
+	z-index: 99;
+	cursor:pointer;
+	}
+	
+	.btn-control {
+		padding:4px;
+		font-size:.7em!important ;
+		max-width: 150px;
+	}
+}
+@media only screen and (min-width: 480px) {
+header img.logo {
+		width:40vh;
+		padding-left:2%;
+		position:relative;
+		margin-bottom:-110px;
+	}
+	header ul li a{
+	color:white;
+	text-decoration: none;
+	font-size:.7em;
+	display: block;
+	float: none;
+	margin-top:.5em;
+		
+	text-align: right;
+	padding:.5em;
+	position:relative;
+	top:-4vh;
+	
+	}
+		.btn-control {
+		padding:4px;
+		font-size:.8em!important ;
+		max-width: 180px;
+	}
+}
+@media only screen and (min-width: 641px) { 
+
+	.prep { font-size: 1.2em;
+	}
+	
+	/*RECIPE PAGE*/
+.recipe-head,
+.recipe-body{ display:flex;  /*flex make the items be one under eachother*/
+				flex-flow: row wrap;
+				justify-content:space-around;
+				
+}
+
+	.recipe-head,
+	.featured-img img,
+	.recipe-param,
+	.recipe-rate
+	{ width:80%;  /*the img of soup in the header*/
+	text-align:center;
+	margin-left: 7%;	
+	/*border:2px solid red*/
+	
+}
+
+.recipe-body {  width:66%;  /*the img of soup in the header*/
+	
+	margin-left: 16%;
+	
+	
+}
+	
+}
+
+@media only screen and (min-width: 768px) {
+
+/*----------------------Header Styles-----------------------------*/
+	header ul li a{
+	color:white;
+	text-decoration: none;
+	font-size:.7em;
+	display: block;
+	float: none;
+	margin-top:.5em;
+	text-align: right;
+	padding:.5em;
+	position:relative;
+	top:-6vh;
+	
+	}
+	small.caps {
+		position:absolute;
+		left:50px;
+		padding-top:.4em;
+}
+	.registration {
+		position:relative;
+		top:1em;
+	}
+	
+	div.proverb {
+		display:block;
+		position:relative;	
+		font-size: 1.1em;
+		line-height: 1.1em;
+		top:2.1em;
+		max-width:180px;
+		left:47%;
+	}
+	
+	header img.logo {
+		width:20vh;
+		padding-left:2%;
+		position:relative;
+		margin-bottom:-120px;
+		z-index: 9;
+	}
+
+/*---------- NAVIGATION -----------*/
+
+	nav select {
+		display:none;
+	}
+	
+	nav ul {
+		display:block;
+		margin-left:2%;
+		border-left:solid 1px rgba(255,255,255, 0.3);
+	}
+	
+	nav {
+		padding: 0;
+	}
+	
+	nav ul li {
+		float:left;
+	}
+	nav ul li a {
+		display:block;
+		color:white;
+		text-decoration: none;
+		border-right:solid 1px rgba(255,255,255, 0.3);
+		padding: .7em .9em;
+	}
+	
+	nav ul li.active >a {
+		background-color: #ff7200;
+	}
+
+/*styles for sub-menu */
+	
+	nav ul li ul {
+		z-index:99;
+		position:absolute;
+		margin: 0;
+		left:-999em;
+		width:10em;
+		background-color: #b00;
+		
+	}
+	nav ul li ul li {
+		float:none;
+		
+	}
+	nav >ul>li:hover >ul {
+		left:auto;
+	}	
+	
+	nav ul li ul li ul  {
+		z-index:109;
+		margin: 0;
+		left:-999em;
+		width:10em;
+		background-color: #b00;
+		float:none;
+	}
+	
+	
+	nav ul li ul li:hover ul {
+		
+		position: absolute;
+		left:162px;
+		top:0;
+	}	
+
+
+	#centerpic {width:100%;}
+	
+	/*-----------------SEARCH BOX STYLES-------------*/
+div#searchbox {
+	position:relative;
+	left:77%;
+	top:-35px;
+	z-index:99;
+}
+input[name="search"] {
+    width: 5%;
+	height:30px;
+	border:2px solid #ccc;
+	border-radius:7px;
+	padding: 1px 2px 1px 30px;
+	background-image: url(../img/searchicon.png);
+	background-repeat: no-repeat;
+	background-position: 5px 3px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+	margin:0 5%;
+	font-weight: 600;
+}
+/* When the input field gets focus, change its width to 100% */
+input[name="search"]:focus {
+    width: 15%;
+	background:rgba(248,118,4,0.82)
+}
+/*--------------end of search box styles---------------*/
+
+
+	div#cookbook {
+	margin-left:20px;
+	margin-top: -10px;
+	display:inline-block;
+	z-index: 99;
+	cursor:pointer;
+}
+	
+	
+/*----------------Accordion Styles---------------*/
+
+#accordion-resizer {
+    padding: 10px;
+    width: 70%;
+	height:50%;
+    margin:1% auto 2% auto;
+  }
+
+/*----------------end of accordion styles------------------*/
+	
+  .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 1em;}
+	.sidenav h2 {font-size:1.2em;}	
+	
+	
+	
+  	.home-page,
+	.deli-creams-page,
+	.veggis-soup-page,
+	.mixed-soups-page,
+	.cold-soups-page,
+	.steaming-hot-page,
+	.soothing-cold-page { display:flex;
+				flex-flow: row wrap;
+				justify-content:space-around;
+			
+	}
+	
+	.all-soup-title {width:100%  /*width of the title "All Soups" on home page - made 100% to take it's own line on big screens*/
+	}
+	.recommended-recipe {width:50%;
+	margin-bottom:2%;
+	}
+	
+		
+	.preview-recipe{width:47%;
+	margin-bottom:2%;
+	  }
+					  
+	 .preview-recipe-name, 
+	 .recommended-recipe-name{ margin-top:0 /*make the title be closer to the img*/
+	}
+	
+	.prep { font-size: 1.1em;
+	}
+	div#cookbook {
+	margin-left:1px;
+	margin-top: 10px;
+	margin-bottom:30px;
+	display:inline-block;
+	z-index: 99;
+	cursor:pointer;
+	}
+		
+} 
+@media only screen and (min-width: 960px) {
+	
+	.prep { font-size: 1.3em;
+		}
+	.recipe-body{
+				width:97%;
+				margin:1% 0 1% 3%;
+				font-size: 1.2em
+	}
+
+	.recipe-rate button {
+					width:48%;
+					margin: 0.5em 0.5% 1% 1%;
+				
+	}
+
+	.recipe-ingredients{ margin:0 -5% 0 10%;
+	
+	}
+	
+	.ingredients-title { width:90%;
+	text-align:left;
+	padding-bottom: 10px
+	}
+	
+	.directions-title h2 {margin-top:7px;
+	padding-bottom: 20px
+	}
+
+
+.recipe-preparation {width:50%;/* border:2px solid red*/
+}
+
+.recipe-ingredients{ width:28%;
+	/*border:2px solid red*/
+}	
+
+
+}
+
+
+@media only screen and (min-width: 1024px ){
+		header img.logo {
+		width:25vh;
+		padding-left:1%;
+		position:relative;
+		margin-bottom:-150px;
+		z-index: 9;	
+		}
+		.registration {
+		position:relative;
+		top:2.3em;
+	}
+	
+	input[name="search"] {
+    width: 5%;
+	height:30px;
+	border:2px solid #ccc;
+	border-radius:7px;
+	padding: 1px 2px 1px 45px;
+	background-image: url(../img/searchicon.png);
+	background-repeat: no-repeat;
+	background-position: 2px 3px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+	margin:0 5%;
+	font-weight: 600;
+}
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+/*-----INSIDE THE WRAPPERS-----*/
+	header, nav, .row, footer {
+		max-width: 1140px;
+		margin: 0 auto; /*centers everything on the page*/
+	}
+	
+	header ul li a{
+	color:white;
+	text-decoration: none;
+	font-size:.9em;
+	display: inline;
+	padding:0 1em;
+	float: right;
+	}
+	
+	.registration {
+		position:relative;
+		top:0;
+	}
+	
+	small.caps {
+		position:absolute;
+		left:120px;
+}
+	div.proverb {
+		display:block;
+		position:relative;
+		left:35%;
+		top:0;
+		max-width: 100%;
+	}
+	
+	header img.logo {
+		width:25vh;
+		padding-left:0;
+		position:relative;
+		margin-bottom:-80px;
+	}
+	
+	
+/*---------- NAVIGATION -----------*/
+	nav ul li a {
+		transition: background 0.4s linear;
+	}
+	
+	nav ul li a:hover {
+		background-color:rgba(0,0,0,0.3);
+	}
+	
+	
+		
+	/*-----------------SEARCH BOX STYLES-------------*/
+div#searchbox {
+	position:relative;
+	left:65%;
+	top:-35px;
+	z-index:99;
+}
+input[name="search"] {
+    width: 10%;
+	height:30px;
+	border:2px solid #ccc;
+	border-radius:7px;
+	padding: 1px 2px 1px 30px;
+	background-image: url(../img/searchicon.png);
+	background-repeat: no-repeat;
+	background-position: 2px 3px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+	margin:0 5%;
+	font-weight: 600;
+}
+/* When the input field gets focus, change its width to 100% */
+input[name="search"]:focus {
+    width: 15%;
+	background:rgba(248,118,4,0.82)
+}
+/*--------------end of search box styles---------------*/
+		
+} 
+@media only screen and (min-width: 1280px) {
+	
+	
+	.preview-recipe{width:32%;
+	}
+	
+	.prep { font-size: 1.2em;
+	}
+	
+	.recipe-ingredients{ margin:0 -15% 0 10%;
+
+	}
+	
+	
+	.recipe-preparation {width:49%;/* border:2px solid red*/
+	}
+	
+	.recipe-ingredients{ width:28%;
+		line-height:1.5
+	}
+}
+
+@media only screen and (min-width: 1485px) {
+	
+	.prep { font-size: 1.5em;
+	}
+	
+}
+
+@media only screen and (min-width: 1600px ){
+		header img.logo {
+		width:10vh;
+		padding-left:0;
+		position:relative;
+		margin-bottom:-80px;
+		z-index: 9;
+		}
+		.registration {
+		position:relative;
+		top:6em;
+	}
+	small.caps {
+		position:absolute;
+		left:120px;
+}
+	div.proverb {
+		display:block;
+		position:relative;
+		left:35%;
+		top:-1em;
+		max-width: 100%;
+	}
+}
+/*end of the media query */

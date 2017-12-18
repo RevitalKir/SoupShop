@@ -1,0 +1,392 @@
+/* CSS Document */
+
+
+/*@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android)  }
+@media (min-width:481px)  { /* smartphones, Android phones, landscape iPhone  }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android)  }
+@media only screen and (min-device-width: 768px){} For tablets
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops  }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops }
+@media (min-width:1281px) { /* hi-res laptops and desktops  }*/
+
+
+html {-webkit-text-size-adjust: none; }
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*-----BODY -----*/
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;	/*also loaded 600 for bold*/
+	
+}
+em {font-style: italic;}
+strong {font-weight: bold;}
+small {font-size:0.5em;
+		/*color:white; */
+		/*position:absolute;
+		left:180px;*/
+}
+
+h2 { font-size: 3em;
+font-weight:700;
+font-family: 'Open Sans', sans-serif;
+}
+h3 { font-size: 2.5em;
+		font-weight:800;
+}
+
+/*-----HEADER -----*/
+#headerWrapper {
+	background-color: #000;
+}
+header {
+	padding: 1em 2% .5em 2%;
+}
+
+header h1 {
+	font-size: 2.1em;
+	color: #fff;
+}
+header h2 {
+	font-size: .9em;
+	font-weight: 300;
+	color: #ddd;
+	margin-top: .75em;
+}
+
+hgroup {
+	position: relative;
+	margin-bottom:.3em;
+}
+
+
+
+
+
+/*---------- NAVIGATION -----------*/
+#navWrapper {background-color: #e61b10;}
+nav ul {
+	display:none;
+}
+
+nav select {
+	display:block;
+	margin:0 5%;
+	width:90%;
+}
+
+nav {
+	padding:0.2em 0;
+}
+
+/*----- FOOTER -----*/
+#footerWrapper {background-color: #000;
+				margin-top:2em}
+footer {
+	clear: both;
+	font-size: .7em;
+	color: #fff;
+	text-align: center;
+	padding: .6em;
+}
+footer a {color: #fff;}
+
+
+
+/* ----- OTHER STUFF ----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*************RECIPE PAGE*************************************/
+
+.soup-title { margin:0.5em 0;
+			text-align:center;
+			font-size: 1.8em;
+			font-weight:bold;
+}
+
+.featured-img img{ width:100vw;  /*the img of soup in the header*/
+
+}
+
+.recipe-param { width:99vw;
+text-align:center;
+display:flex;
+flex-direction:row;
+flex-wrap: wrap;
+justify-content:space-between;
+align-items:baseline;
+margin-left:7px;
+}
+/*div with preper icons and info*/
+.prep-time,
+.servers,
+.skill-level,
+.likes      {width: 24%;
+border-right:1px solid #ddd;
+		
+}
+
+
+.prep-time img,
+.servers img,
+.skill-level img,
+.likes img     {width: 36px;
+}
+
+/*the style of the prep time+servings+skill level+likes*/
+.recipe-param h6{line-height:1.2em;
+}
+.recipe-param h6 span { color: #ff7200;
+						font-weight:500;						
+}
+
+/*.recipe-rate {text-align: center;
+}*/
+
+.recipe-rate button {background-color:rgba(255,114,0,0.9);
+					color:white;
+					border: 2px outset #ddd;
+					width:97%;
+					font-family: 'Open Sans', sans-serif;
+					font-size:1.5em;
+					text-align:center;
+					margin: 0.5em 0.5% 1% 1.5%;
+					min-height:46px
+					/*margin-top:0.5em;
+					margin-bottom:2%;*/
+					
+}
+
+
+.recipe-rate button:hover {border: 2px solid #ddd;
+							background-color:rgba(255,114,0,1.00);
+}
+
+
+.recipe-ingredients,
+.recipe-directions { width:98%;
+			margin-left:2.5%;	
+			line-height:1.3;
+			margin-bottom:1.5em;
+			
+}
+.recipe-ingredients{ margin-left:4%;
+			line-height:1.5;
+}
+/*ingredients title*/
+.ingredients-title{ margin:0.5em 0;
+}
+
+.ingredients-title,
+.directions-title { text-align:center;
+					font-size: 0.7em;
+					font-weight:bold;
+
+}
+.directions-title{ margin-bottom:-1em
+}
+.recipe-directions li {margin-bottom:1em;
+}
+
+
+.recipe-directions li::first-letter{
+   color: #ff7200;
+   font-size:2.5em;
+   font-weight:bold;
+   
+}
+
+@media only screen and (min-width: 641px) { 
+/*---------- NAVIGATION -----------*/
+
+	nav select {
+		display:none;
+	}
+	
+	nav ul {
+		display:block;
+		margin-left:2%;
+		border-left:solid 1px rgba(255,255,255, 0.3);
+	}
+	
+	nav {
+		padding: 0;
+	}
+	
+	nav ul li {
+		float:left;
+	}
+	nav ul li a {
+		display:block;
+		color:white;
+		text-decoration: none;
+		border-right:solid 1px rgba(255,255,255, 0.3);
+		padding: .7em .9em;
+	}
+	
+	nav ul li.active >a {
+		background-color: #ff7200;
+	}
+
+/*styles for sub-menu */
+	
+	nav ul li ul {
+		z-index:99;
+		position:absolute;
+		margin: 0;
+		left:-999em;
+		width:10em;
+		background-color: #b00;
+		
+	}
+	nav ul li ul li {
+		float:none;
+		
+	}
+	nav >ul>li:hover >ul {
+		left:auto;
+	}	
+	
+	nav ul li ul li ul  {
+		z-index:99;
+		
+		margin: 0;
+		left:-999em;
+		width:10em;
+		background-color: #b00;
+		float:none;
+	}
+	
+	
+	nav ul li ul li:hover ul {
+		
+		position: absolute;
+		left:162px;
+		top:0;
+	
+	}	
+
+
+
+.recipe-head,
+.recipe-body{ display:flex;  /*flex make the items be one under eachother*/
+				flex-flow: row wrap;
+				justify-content:space-around;
+				
+}
+
+	.recipe-head,
+	.featured-img img,
+	.recipe-param,
+	.recipe-rate
+	{ width:80%;  /*the img of soup in the header*/
+	text-align:center;
+	margin-left: 7%;	
+	/*border:2px solid red*/
+	
+}
+
+.recipe-body {  width:66%;  /*the img of soup in the header*/
+	
+	margin-left: 16%;
+	
+	
+}
+
+
+}
+
+@media only screen and (min-width: 768px) { 
+
+	
+}
+
+@media only screen and (min-width: 960px) {
+
+	.recipe-body{
+				width:97%;
+				margin:1% 0 1% 3%;
+				font-size: 1.2em
+}
+
+	.recipe-rate button {
+					width:48%;
+					margin: 0.5em 0.5% 1% 1%;
+					
+					
+}
+
+.recipe-ingredients{ margin:0 -5% 0 10%;
+
+}
+
+.ingredients-title { width:90%;
+text-align:left;
+padding-bottom: 10px
+}
+
+.directions-title h2 {margin-top:7px;
+padding-bottom: 20px
+}
+
+/*.directions-title h2, .ingredients-title h2{ border:2px solid red
+}*/
+.recipe-preparation {width:50%;/* border:2px solid red*/
+}
+
+.recipe-ingredients{ width:28%;
+	/*border:2px solid red*/
+}
+}
+
+@media only screen and (min-width: 1140px) {
+
+/*-----INSIDE THE WRAPPERS-----*/
+	header, nav, .row, footer {
+		max-width: 1140px;
+		margin: 0 auto; /*centers everything on the page*/
+	}
+
+
+
+/*---------- NAVIGATION -----------*/
+	nav ul li a {
+		transition: background 0.4s linear;
+	}
+	
+	nav ul li a:hover {
+		background-color:rgba(0,0,0,0.3);
+	}
+	
+
+
+	
+} 
+
+@media only screen and (min-width: 1280px) {
+	
+	.recipe-ingredients{ margin:0 -15% 0 10%;
+
+}
+
+
+.recipe-preparation {width:49%;/* border:2px solid red*/
+}
+
+.recipe-ingredients{ width:28%;
+	line-height:1.5
+}
+	
+}
+
+@media only screen and (min-width: 1485px) {
+	
+		
+}

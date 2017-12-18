@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Soup Shop</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- LOAD THE LATEST VERSION OF JQUERY-->
+<!-- https://developers.google.com/speed/libraries/devguide#jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet" type="text/css">
+<!-- *************** STYLE SHEETS ****************** -->
+<!-- W3.CSS link for modals' classes -->
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!--side bar nav for all the products-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h2 class="product-section">Our Products and Giftable Items</h2>
+  <a href="../product_recipe_book.html">Your Soup Shop: Recipe Book</a>
+  <a href="#"><em>i-C&#x2764;&#x2764;K</em> brand T-Shirts</a>
+  <a href="#"><em>Your Soup Shop </em>Mugs</a>
+  <a href="#"> 6 &amp; 10 inch Sterile Silver Ladles</a>
+</div>
+
+<div id="main">
+
+
+    <div id="headerWrapper">
+        <header class="clearfix">
+            
+        <hgroup>
+           <!-- <h1>Your <strong>Soup</strong> Shop</h1>-->
+           <img src="../img/logo_white2.png" class="logo" alt="company logo" width="250px">
+           
+        </hgroup>
+        <div class="proverb">
+            <h2>All wories go down better with <em>soup</em>.</h2>
+            <small class="caps"><em>Jewish Proverb</em></small>	
+        </div>
+           
+          <div class="w3-container">
+          
+            <div class="registration">
+                <ul>
+                    <li><a id="cart">Shopping Cart 🛒</a></li>
+                    <li><a id="login">Login</a></li>
+                    <li><a id="register">Register</a></li>
+                </ul>
+            </div>
+          
+          </div>
+      
+    </header>
+    </div><!-- end of header wrapper -->  
+    
+      
+    
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:300px">
+    
+          <div class="w3-center orange"><br>
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+            <img src="../img/soupbowl_icon4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+          </div>
+    
+          <form class="w3-container" action="/login_processing_page.php">
+            <div class="w3-section">
+              <button class="facebook w3-block w3-section w3-padding" type="submit">Login with FACEBOOK</button>
+              <span class="w3-center w3-block w3-section">OR</span>
+              <label><b>Username</b></label>
+              <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your Username or Email" name="usrname" required>
+              <label><b>Password</b></label>
+              <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+              <button class="w3-button w3-block w3-section w3-padding" type="submit">Login</button>
+              <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+            </div>
+          </form>
+    
+          <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+            <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button orange">Cancel</button>
+            <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+          </div>
+    
+        </div>
+      </div>
+    
+
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content w3-card-4  w3-animate-left" style="max-width:400px">
+          <header class="w3-container orange"> 
+            <span onclick="document.getElementById('id02').style.display='none'" 
+            class="w3-button w3-display-topright">&times;</span>
+            <h1>Registration Form</h1>
+          </header>
+          <form class="w3-container" action="/logun_processing_page.php">
+            <div class="w3-section">
+              <label><b>Username</b></label>
+              <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter your Username or Email" name="usrname" required>
+              <label><b>Password</b></label>
+              <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password" name="psw" required>
+              <label><b>Repeat Password</b></label>
+              <input class="w3-input w3-border" type="password" placeholder="Repeat Password" name="psw2" required>
+              <button class="w3-button w3-block w3-section w3-padding" type="submit">Submit Registration Form</button>
+            </div>
+          </form>
+          <footer class="w3-container orange">
+            <p class="registration_footer">Become a soup chef by signing up for our weekely <strong><a href="">newsletter</a></strong>! </p>
+          </footer>
+        </div>
+      </div>
+
+
+      <div id="id03" class="w3-modal">
+        <div class="w3-modal-content w3-animate-right" style="max-width:400px">
+          <header class="w3-container orange"> 
+            <span id="num_items"><span class="quantity">0</span> All Item(s)</span>
+            <ul id="cartnav">
+                <li class="w3-button cartedit">Reset</li>
+                <li class="w3-button cartclose" onclick="document.getElementById('id03').style.display='none'">Close</li>
+            </ul>
+            <h2 class="promo1"> <strong>FREE SHIPPING</strong> with a purchase of 2 or more products!</h2>
+          </header>
+          <div class="w3-container">
+            <ul id="shopping-table">
+                <li>Items:</li>
+                <li>Quantity:</li>
+                <li>Price:</li>
+            </ul>
+            <ul id="shopping-items">
+                <li>Soup Shop <br>Recipe Catalog</li>
+                <li><input type="number" id="quantity" min="0"></li>
+                <li>$ <span class="price">0.00</span> CAD</li>
+            </ul>
+            <p class="subtotal"><strong>SUBTOTAL</strong></p>
+            <p class="sub-price">$ 0.00 <span>CAD</span></p>
+            <h3 class="shipping-fee"> ✈ &nbsp;SHIPPING ESTIMATE:  <span></span></h3>
+            <button class="checkout w3-button">Checkout</button>
+          </div>
+          <footer class="w3-container orange shopping-footer">
+            <p><a href="">Information on our return policy and shipping</a></p>
+          </footer>
+        </div>
+      </div>
+  
+	
+    <div id="navWrapper">
+    <nav>
+        <ul class="clearfix">
+            <li class="active"><a href="../index.html">HOME</a></li>
+            <li><a href="../index.html">ALL RECIPES</a>
+                <ul>
+                <li><a href="../steaming-hot.html">Steaming Hot </a>
+                    <ul>
+                    <li><a href="../deli-creams-soups.html">Deli Creams</a></li>
+                    <li><a href="../Pure-Veggies-soups.html">Pure Veggies</a></li>
+                    <li><a href="../mixed-soups.html">Mix-It-All</a></li>
+                    </ul>
+                </li>
+                <li><a href="../soothing-cold.html">Soothing Cold</a> </li>
+                </ul>
+            </li>
+            <li><a href="#">TIPs &amp; TUTs</a>
+                <ul>
+                <li><a href="#">Video Tutorials</a></li>
+                <li><a href="#">Hand-picked cooking tips</a></li>
+                </ul>
+            </li>
+          <li><a href="../icook.html"><strong>i-</strong>C&#x2764;&#x2764;K</a></li>
+        </ul>
+    </nav>
+    
+    </div><!-- end of nav wrapper --> 
+    
+    <div id="searchbox">
+        <input type="text" name="search" placeholder="Search..">
+    </div>
+
+ 
+ 
+
+    <div id="cookbook">
+        <img src="../img/Cook-Book-icon.png" alt="image of a cooking book that linked to product page" width="50px" >
+    </div>
+      
+		<main class = "contentWrapper">
+        	<div class="soup-title">
+            	<h1 class ="title"> Corn Soup</h1>
+            </div>	
+            
+            <div class ="recipe-head">
+            	<div class ="featured-img">
+                	<img   alt="image Corn Soup" src="../img/corn-soup.png">
+                </div><!--end of featured-img-->
+                
+                <div class ="recipe-param">
+                	<div class ="prep-time">
+                    	<img class = "prep-time-icon" alt="icon of prepatation time" src="../img/prep-icon1.png">
+                        <h6><span>prep time:</span> <br/> 35mins</h6>
+                    </div>
+                    <div class = "servers">
+                    	<img class = "prep-time-icon" alt="icon of number of servings" src="../img/servings1.png">
+                        <h6><span>servings:</span> <br/> 6</h6>
+                        <p></p>
+                    </div>
+                    <div class ="skill-level">
+                    <img class = "prep-time-icon" alt="icon of level of skill needed" src="../img/chef-cook.png">
+                    <h6><span>skill level:</span> <br/> Easy</h6>
+                    </div>
+                    <div class ="likes">
+                    <img class = "heart-icon" alt="icon of heart" src="../img/heart-icon.png">
+                    <h6><span>likes:</span> <br/> 40</h6>
+                    </div>
+                    
+                </div> <!--end of recipe-param-->
+                
+                <div class ="recipe-rate">
+                	<button class="like-recipe w3-button"> Like this recipe &nbsp; <i class="fa fa-heart-o" aria-hidden="true"> </i></button>
+                    <button class ="add-recipe w3-button"><i class="fa fa-plus" aria-hidden="true"></i> &nbsp; Add to my recipes </button>
+                </div> <!--end of recipe-rate-->
+                
+            </div><!--end of recipe-head-->
+            <div class="recipe-body">
+            	
+                <div class ="recipe-ingredients">
+                    <div class="ingredients-title">
+                        <h2>Ingredients</h2>
+                    </div>
+                    <ul>
+                    	<li><strong>1</strong> onion, finely chopped</li>
+                        <li><strong>6 cups</strong> fresh or frozen corn kernels </li>
+                        <li><strong>30 ml</strong> butter</li>
+                        <li><strong>125 ml</strong> 15% cream (optional)</li>
+                        <li>&nbsp;Salt and pepper</li>
+                    </ul>
+                </div>
+                <div class ="recipe-preparation">
+                    <div class="directions-title">
+                        <h2>Directions</h2>
+                    </div>
+                    <div class="recipe-directions">
+                        <ul>
+                        	<li>1  In a large saucepan over medium heat, soften the onion in the butter ( for about 5 minutes). Add the corn. Bring to a boil.
+                            </li>
+                            <li>2 Cover and simmer for about 15 minutes. Remove 250 ml (1 cup) cooked corn and set aside. Purée the soup in a blender. Strain through a sieve. Add the cream and reserved corn. Adjust the seasoning. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!--end of recipe-body-->
+        
+        
+        </main><!--end of contentWrapper-->
+
+		<div id="footerWrapper">
+          <footer>
+            <p> Copyright &copy; 2017  &bull; Your <strong>Soup</strong> Shop &bull;  999 Blvd. St Jean &bull; 1-800-555-5555</p>
+          </footer>
+   	   </div><!-- end of footer wrapper -->  
+    </div>   <!-- end of container --> 
+
+	
+    
+    
+	<script src="../js/main.js"></script>
+</body>
+</html>
